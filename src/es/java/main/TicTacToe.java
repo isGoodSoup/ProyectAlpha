@@ -1,13 +1,11 @@
 package es.java.main;
 
 import java.util.Random;
-import java.util.Scanner;
 
 import es.java.utils.Menu;
 
 public class TicTacToe {
 
-	static Scanner scan = new Scanner(System.in);
 	static Random rdom = new Random();
 	static String[][] grid = {
 								{" ", " ", " "}, 
@@ -33,8 +31,6 @@ public class TicTacToe {
 			System.out.println("TIC TAC TOE");
 			String[] menu = {"Against PC", "CO-OP", "Exit"};
 			Menu.printMenu(menu);
-			option = scan.nextInt();
-			scan.nextLine();
 			
 			switch (option) {
 				
@@ -123,14 +119,10 @@ public class TicTacToe {
     	if (player == 1) {
     		
     		if (playerReply.isEmpty()) {
-        		
         		System.out.print("Your turn: ");
-            	playerReply = scan.nextLine();
         	}
         	
-        	System.out.print("[Player 1] In position (1-9): ");
-        	pos = scan.nextInt();
-        	scan.nextLine();
+//        	System.out.print("[Player 1] In position (1-9): ");
         	
         	row = (pos - 1) / 3;
         	col = (pos - 1) % 3;
@@ -145,14 +137,10 @@ public class TicTacToe {
     	if (player == 2) {
     		
     		if (player2Reply.isEmpty()) {
-        		
         		System.out.print("Tu turno: ");
-            	player2Reply = scan.nextLine();
         	}
         	
-        	System.out.print("[Player 2] In position (1-9): ");
-        	pos = scan.nextInt();
-        	scan.nextLine();
+//        	System.out.print("[Player 2] In position (1-9): ");
         	System.out.println();
         	
         	row = (pos - 1) / 3;
